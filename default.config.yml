@@ -30,7 +30,7 @@ vagrant_synced_folders:
 
 # Memory and CPU to use for this VM.
 vagrant_memory: 2048
-vagrant_cpus: 1
+vagrant_cpus: 2
 
 # Minimum required versions.
 drupalvm_vagrant_version_min: '1.8.6'
@@ -43,7 +43,7 @@ force_ansible_local: false
 drupalvm_webserver: apache
 
 # The database system to use. Can be either 'mysql' or 'pgsql'.
-drupalvm_database: mysql
+drupalvm_database: pgsql
 
 # Set this to 'false' if you are using a different site deployment strategy and
 # would like to configure 'vagrant_synced_folders' and 'apache_vhosts' manually.
@@ -85,7 +85,7 @@ drupal_account_name: admin
 drupal_account_pass: admin
 
 # Additional arguments or options to pass to `drush site-install`.
-drupal_site_install_extra_args: []
+drupal_site_install_extra_args: [--debug]
 
 # Cron jobs are added to the vagrant user's crontab. Keys include name
 # (required), minute, hour, day, weekday, month, job (required), and state.
