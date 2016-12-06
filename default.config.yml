@@ -70,7 +70,7 @@ drupal_composer_project_options: "--prefer-dist --stability dev --no-interaction
 install_site: true
 
 # Required Drupal settings.
-drupal_core_path: "{{ drupal_composer_install_dir }}/web"
+drupal_core_path: "{{ drupal_composer_install_dir }}"
 drupal_db_user: drupal
 drupal_db_password: drupal
 drupal_db_name: drupal
@@ -247,6 +247,8 @@ php_packages:
   - php5.6-dev
   - php5.6-fpm
   - php5.6-gd
+  - php5.6-mysql
+  - php5.6-pgsql
   - php5.6-sqlite3
   - php5.6-xml
   - php5.6-mbstring
